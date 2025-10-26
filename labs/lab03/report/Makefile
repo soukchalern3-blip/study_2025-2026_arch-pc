@@ -1,7 +1,7 @@
 all: report.pdf report.docx
 
-report.pdf: report.md
-	pandoc report.md -o report.pdf --pdf-engine=xelatex
+report.pdf: report.md template.tex
+	pandoc report.md -o report.pdf --template=template.tex --pdf-engine=xelatex
 
 report.docx: report.md
 	pandoc report.md -o report.docx
